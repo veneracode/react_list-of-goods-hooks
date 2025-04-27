@@ -20,9 +20,11 @@ export const App = () => {
   const [isReversed, setIsReversed] = useState<boolean>(false);
   const [sortType, setSortType] = useState<'none' | 'alphabet' | 'length'>('none');
 
+
+
   const sortAlphabet = () => {
     if (sortType !== 'alphabet') {
-      const sorting = [...good].sort();
+      const sorting = [...goodsFromServer].sort();
       setGoods(sorting);
       setSortType('alphabet');
     } else {
@@ -33,7 +35,7 @@ export const App = () => {
 
   const sortByLength = () => {
     if (sortType !== 'length') {
-      const byLength = [...good].sort((a, b) => a.length - b.length);
+      const byLength = [...goodsFromServer].sort((a, b) => a.length - b.length);
       setGoods(byLength);
       setSortType('length');
     } else {
