@@ -45,7 +45,7 @@ export const App = () => {
   };
 
   const setReverse = () => {
-    const reversing = [...good].reverse();
+    const reversing = [...goodsFromServer].reverse();
     setGoods(reversing);
     setIsReversed(!isReversed);
   };
